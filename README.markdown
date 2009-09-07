@@ -14,13 +14,17 @@ so probably the switch to ss to dc should be transparent.
 
   RabbitMQ: A Erlang Message Queue
 
-  Carrot: synchronous amqp client gem
+  AMQP: amqp gem and
+ 
+  Carrot: the amsynchronous amqp client gem
 
 # Getting Started
 
 ## Install
 
+        sudo gem install amqp
 	sudo gem install famoseagle-carrot
+
 
 Install this Rails plugin as usual.
 	script/plugin install git@github.com:michelson/detached-carrot.git
