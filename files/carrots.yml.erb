@@ -1,0 +1,22 @@
+development:
+  host: 127.0.0.1
+  port: 22122
+  pid_file: <%=pwd%>/tmp/pids/carrot_development.pid
+  log_file: <%=pwd%>/log/development_carrot.log
+  queue_path: <%=pwd%>/tmp/carrot
+  timeout: 0
+  log_level: DEBUG
+  daemonize: true
+  queue: development
+  queue_pid_file: <%=pwd%>/log/carrot_queue_development.pid
+test:
+  host: 127.0.0.1
+  port: 22122
+  pid_file: <%=pwd%>/tmp/pids/carrot_test.pid
+  log_file: <%=pwd%>/log/test_carrot.log
+  queue_path: <%=pwd%>/tmp/carrot
+  timeout: 0
+  log_level: DEBUG
+  daemonize: true
+  queue: test
+  queue_pid_file: <%=pwd%>/log/carrot_queue_test.pid
