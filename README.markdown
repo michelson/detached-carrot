@@ -15,14 +15,15 @@ so probably the switch to ss to dc should be transparent.
 
 # Diving In
 
- [simplifiedStarling] (http://github.com/fesplugas/simplified_starling/tree/master) 
- [carrot] (http://github.com/famoseagle/carrot/tree/master)
- [a nice-quick guide about installing erlang, rabbit and nanites] (http://github.com/ezmobius/nanite/tree/master)
+	[simplifiedStarling] (http://github.com/fesplugas/simplified_starling/tree/master) 
+	[carrot] (http://github.com/famoseagle/carrot/tree/master)
+	[a nice-quick guide about installing erlang, rabbit and nanites] (http://github.com/ezmobius/nanite/tree/master)
 
 
 # Dependencies & requisites
+
   Erlang: the language
-	Rabbit: the Erlang Message Queue
+  Rabbit: the Erlang Message Queue
   Carrot: A gem for synchronous amqp client
 
 ## Example
