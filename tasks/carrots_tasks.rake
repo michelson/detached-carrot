@@ -53,26 +53,3 @@ namespace :carrots do
   end
 
 end
-
-namespace :ss do
-  desc "Start carrots server"
-  task :start => "carrots:start"
-  desc "Stop carrots server"
-  task :stop  => "carrots:stop"
-  desc "Restart carrots server"
-  task :restart => "carrots:restart"
-  desc "Start processing jobs (process is daemonized)"
-  task :start_processing_jobs => "carrots:start_processing_jobs"
-  desc "Start processing jobs (process is daemonized)"
-  task :start_prcs => "carrots:start_processing_jobs"
-  desc "Stop processing jobs"
-  task :stop_processing_jobs => "carrots:stop_processing_jobs"
-  desc "Stop processing jobs"
-  task :stop_prcs => "carrots:stop_processing_jobs"
-  desc "Start carrots and process jobs"
-  task :start_and_process_jobs => "carrots:start_and_process_jobs"
-  desc "Start carrots and process jobs"
-  task :spj => "carrots:start_and_process_jobs"
-  desc "Server stats"
-  task :stats => "carrots:stats"
-end
