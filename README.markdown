@@ -15,21 +15,21 @@ so probably the switch to ss to dc should be transparent.
 
 # Getting Started
 
-## install
+## Install
 
 	sudo gem install famoseagle-carrot
 	script/plugin install git@github.com:michelson/detached-carrot.git
 	
-## start RabbitMQ
+## Start RabbitMQ
 
 	$  sudo rabbitmq-server
 	
-## tasks
+## Tasks
 
 	rake carrots:start_processing_jobs
 	rake carrots:stop_processing_jobs
 		
-## Usages
+## Usage
 
 example 1, Push a +newsletter+ job into +rabbitMQ+.
 	Newsletter.find(params[:id]).push('deliver')
