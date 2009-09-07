@@ -4,8 +4,7 @@ A port of SimplifiedStarling plugin for push&amp;pop active_record tasks to Rabb
 
 SimplifiedStarling is a very cool plugin that works on StarlingMQ, since Starling presented some problems with the latest versions of memcached-client i decided to work on porting SimplifiedStarling to work on RabbitMQ.
 
-This plugin works with carrots gem a great gem for to manage the queues of RabbitMQ. so what makes DetachedCarrot is simply detach the process and push AR tasks in the same way SimplifiedStarling does.
-so probably the switch to ss to dc should be transparent.
+This plugin works with carrot gem a great client for synchronous amqp. so what makes DetachedCarrot is simply detach the process and push AR tasks in the same way as SimplifiedStarling does. so probably the switch to ss to dc should be transparent.
 
 
 # Dependencies & requisites
