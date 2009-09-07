@@ -32,10 +32,10 @@ so probably the switch to ss to dc should be transparent.
 		
 ## Usages
 
-	# example 1, Push a +newsletter+ job into +starling+.
+	# example 1, Push a +newsletter+ job into +rabbitMQ+.
 	Newsletter.find(params[:id]).push('deliver')
  
-	# example 2, Confirm an +order+ payment and push into +starling+ an stock recalculation job.
+	# example 2, Confirm an +order+ payment and push into +rabbitMQ+ an stock recalculation job.
 	Stock.push('recalculate')
  
 	# example 3 , Push a task with options.
@@ -60,8 +60,8 @@ database connection will be restored and job will be processed.
 If the record you're trying to process is removed from the database before 
 the queue is processed you'll see a warning on the logs.
 
-	[2008-06-30 11:06:50] Pushed rebuild Page 3
-	[2008-06-30 11:06:50] WARNING Page#3 gone from database.
+[2008-06-30 11:06:50] Pushed rebuild Page 3
+[2008-06-30 11:06:50] WARNING Page#3 gone from database.
 
 	
 
