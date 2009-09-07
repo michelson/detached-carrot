@@ -35,13 +35,6 @@ namespace :carrots do
     end
   end
 
-  desc "Start carrots and process jobs"
-  task :start_and_process_jobs do
-    Rake::Task['carrots:start'].invoke
-    sleep 10
-    Rake::Task['carrots:start_processing_jobs'].invoke
-  end
-
   desc "Server stats"
   task :stats do
     begin
