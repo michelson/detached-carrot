@@ -10,7 +10,9 @@ so probably the switch to ss to dc should be transparent.
 # Dependencies & requisites
 
   Erlang: the language
+
   RabbitMQ: the Erlang Message Queue
+
   Carrot: synchronous amqp client gem
 
 # Getting Started
