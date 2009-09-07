@@ -82,7 +82,6 @@ the queue is processed you'll see a warning on the logs.
 
 	Amos Elliston,  author of carrot gem, a nice synchronous amqp client
 	Francesc Esplugas Marti, for his cool SimplifiedStarling plugin 
-	Blaine Cook, Twitter Inc. for this nice queue system.
 	Joe Van Dyk for his work on adding options to tasks, Tanga.com LLC
 
 # License
