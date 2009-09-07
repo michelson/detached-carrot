@@ -1,7 +1,7 @@
 require 'erb'
 
 carrot_config = Dir.getwd + "/config/carrots.yml"
-carrot_config_template = Dir.getwd + "/vendor/plugins/simplified_carrot/files/carrots.yml.erb"
+carrot_config_template = Dir.getwd + "/vendor/plugins/detached-carrot/files/carrots.yml.erb"
 
 unless File.exist?(carrot_config)
 
