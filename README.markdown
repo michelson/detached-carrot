@@ -1,17 +1,18 @@
 # DetachedCarrot
 
-A port of SimplifiedStarling plugin for push&amp;pop active_record tasks to RabbitMQ
+A port of SimplifiedStarling plugin for push&amp;pop active_record tasks to RabbitMQ.
+
 SimplifiedStarling is a very cool plugin that works on StarlingMQ, since Starling presented some problems with the latest versions of memcached-client i decided to work on porting SimplifiedStarling to work on RabbitMQ.
 
-this plugin works with carrots gem a great gem for to manage the queues of RabbitMQ. so what makes DetachedCarrot is simply detach the process and push AR tasks in the same way SimplifiedStarling does.
+This plugin works with carrots gem a great gem for to manage the queues of RabbitMQ. so what makes DetachedCarrot is simply detach the process and push AR tasks in the same way SimplifiedStarling does.
 so probably the switch to ss to dc should be transparent.
 
 
 # Dependencies & requisites
 
-  Erlang: the language
+  Erlang: The lang
 
-  RabbitMQ: the Erlang Message Queue
+  RabbitMQ: A Erlang Message Queue
 
   Carrot: synchronous amqp client gem
 
@@ -33,13 +34,13 @@ so probably the switch to ss to dc should be transparent.
 		
 ## Usage
 
-example 1, Push a +newsletter+ job into +rabbitMQ+.
+Example 1, Push a +newsletter+ job into +rabbitMQ+.
 	Newsletter.find(params[:id]).push('deliver')
  
-example 2, Confirm an +order+ payment and push into +rabbitMQ+ an stock recalculation job.
+Example 2, Confirm an +order+ payment and push into +rabbitMQ+ an stock recalculation job.
 	Stock.push('recalculate')
  
-example 3 , Push a task with options.
+Example 3 , Push a task with options.
 	Repository.push :generate, { :token => token }
 	
 ## log
