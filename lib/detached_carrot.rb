@@ -58,11 +58,13 @@ module DetachedCarrot
 
    def self.pop
      return unless CARROT.message_count > 0
-      job = CARROT.pop(:ack => true)
-      puts "Popping: #{job.inspect}"
-      job = JSON.parse(job) 
+
       begin
       #  job = autoload_missing_constants { CARROT.get(queue) }
+      job = CARROT.pop(:ack => true)
+      puts "Popping: #{job.inspect}"
+      job = JSON.parse(job)
+      CARROT.ack
       options = []
       options << job['options'][0].key_strings_to_symbols! unless job['options'][0].nil?
       puts " the options are #{options.inspect}"
@@ -78,7 +80,7 @@ module DetachedCarrot
         CARROT_LOG.warn "[#{Time.now.to_s(:db)}] WARNING #{job['type']}##{job['id']} gone from database."
       rescue ActiveRecord::StatementInvalid
         CARROT_LOG.warn "[#{Time.now.to_s(:db)}] WARNING Database connection gone, reconnecting & retrying."
-        CARROT.publish(job)
+        CARROT.publish(job.to_json)
         ActiveRecord::Base.connection.reconnect!
         retry
       rescue Exception => error
@@ -86,7 +88,6 @@ module DetachedCarrot
         puts "[#{Time.now.to_s(:db)}] ERROR #{error.message}"
         
       end
-      CARROT.ack
     end
 
     def self.stats
