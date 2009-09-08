@@ -118,7 +118,7 @@ class DetachedCarrotTest < Test::Unit::TestCase
     10.times { Post.push('generate') }
     assert_equal 10, DetachedCarrot::Server.message_count
     10.times { DetachedCarrot::Server.pop }
-    sleep 10
+    sleep 3
     assert_equal 0, DetachedCarrot::Server.message_count
     assert_equal 10, Post.count
   end
@@ -137,7 +137,6 @@ class DetachedCarrotTest < Test::Unit::TestCase
     assert post.reload.name == "Joe"
   end
 
-=begin
   def test_when_raises_active_record_statement_invalid_exception_job_does_not_get_lost    
     post = Post.find(:first)
     assert post.reload.name != "Joe"
@@ -148,5 +147,4 @@ class DetachedCarrotTest < Test::Unit::TestCase
     DetachedCarrot::Server.pop
     assert post.reload.name == "Joe"
   end
-=end
 end
